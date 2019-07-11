@@ -12,7 +12,7 @@ const store = createStore(
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { data: [], filtered: [], filter: "" };
+    this.state = { data: [] };
   }
 
   getData = () => {
@@ -37,38 +37,12 @@ class App extends Component {
     }
   };
 
-  filterResult = (data, refine) => {
-    let refineResults = data;
-
-    if (refine !== "") {
-      refineResults = data.filter(function(data) {
-        if (
-          data.name.toLowerCase() === refine.toLowerCase() ||
-          data.address.toLowerCase() === refine.toLowerCase() ||
-          data.area.toLowerCase() === refine.toLowerCase()
-        ) {
-          return data;
-        } else {
-          return false;
-        }
-      });
-    }
-    return refineResults;
-  };
-
   handleChange = event => {
     this.setState({ filter: event.target.value });
   };
 
   render() {
-  
-    let searchResult = this.filterResult(this.state.data, this.state.filter);
-    console.log("this.state.data") 
-    console.log(this.state)  
-    console.log(this.state.data)
-    console.log(this.state.filter)
-    console.log(searchResult)
-    let results = searchResult.map(restaurant => {
+    let results = this.state.data.map(restaurant => {
       return <ResultsRow key={restaurant.name} data={restaurant} />;
     });
 
@@ -76,7 +50,6 @@ class App extends Component {
       <div className="App">
         <h1>Find nearby restaurants</h1>
         <div className="App-header">
-
           <input
             type="text"          
             className="input"
@@ -85,8 +58,6 @@ class App extends Component {
           <button className="button-search" onClick={this.getData}>
             Search
           </button>
-
-
         </div>
         {results}
       </div>
