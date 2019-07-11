@@ -7,7 +7,7 @@
 
 ## 2. What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you&#39;ve used it.
    
-    The project did not need more than basic es6. Simple is always better.
+    I used redux to store results. The project did not need more than basic es6. Simple is always better.
 
 ## 3. How would you track down a performance issue in production? Have you ever had to do this?
       
