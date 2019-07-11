@@ -1,0 +1,52 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  
+}
+
+.App-link {
+  color: #61dafb;
+}
+.input{
+  width: 200px;
+  display: inline-block;
+}
+
+.button-search {
+  margin-top: 10px;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+.results-row {
+  border: 1px grey solid;
+  padding: 20px;
+  width: 50%;
+  max-width: 500px;
+  margin: 20px auto;
+  border-radius: 5px;
+  color: "#000";
+}
+.results-name {
+  margin-bottom: 0px;
+  margin-top: 0px
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
